@@ -12,11 +12,11 @@ include-file = ~/.config/polybar/system-plot_modules.ini
 
 Your main configuration file is the one used at polybar launching, generaly in a launcher script at polybar config directory, such as `~/.config/polybar/launch.sh`:
 
-´´´
+```
 polybar -c ~/.config/polybar/config.ini main &
-´´´
+```
 
-Also in the polybar main cofiguration file, in your desired bar section, include VerticalBars or VerticalBarsCenter fonts (these fonts, in the project's ´fonts´ directory, should be installed), depending on your personal taste for centralized or bottom-aligned bars. Including it as the second font (`font-1`) and disabling antialiasing gave me the best results. 
+Also in the polybar main cofiguration file, in your desired bar section, include VerticalBars or VerticalBarsCenter fonts (these fonts, in the project's `fonts` directory, should be installed), depending on your personal taste for centralized or bottom-aligned bars. Including it as the second font (`font-1`) and disabling antialiasing gave me the best results. 
 
 ```
 font-1 = VerticalBars:size=5:antialias=false
@@ -26,10 +26,10 @@ or
 font-1 = VerticalBarsCenter:size=6:antialias=false
 ```
 
-Now you can just position the ´upload-plot´ and ´download-plot´ modules among your own ones using ´modules-(center/left/right)´ definitions. As an example:
+Now you can just position the `upload-plot` and `download-plot` modules among your own ones using `modules-(center/left/right)` definitions. As an example:
 
-´´´
+```
 modules-left = bspwm date
 modules-center = cpu temperature memory alsa backlight keyboard
 modules-right = upload-plot checknetwork download-plot
-´´´
+```
