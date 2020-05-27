@@ -5,6 +5,9 @@ A rolling window average is computed in order to be abble to choose between a "s
 ![Bottom-aligned bars](/images/bottom_example.gif)
 ![Centered bars](/images/centered_example.gif)
 
+If you enjoyed it, please consider buying me a coffee.\
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/default-orange.png)](https://www.buymeacoffee.com/ilidio)
+
 ## Installation (suggested method)
 Clone or download this repository and move/copy/link the `scripts` folder (where the main script is) together with the `system-plot_modules.ini` file to your polybar config directory (`~/.config/polybar`). Include the `system-plot_modules.ini` using the following line under the global WM settings of yours main polybar configuration file.
 
