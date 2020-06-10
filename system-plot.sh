@@ -16,9 +16,9 @@
 ## Time interval in seconds between updates
 # INTERVAL=.01
 
-## increasing height bars characters (set by default to use with VerticalBars font).
+## height-increasing bars characters (set by default to use with VerticalBars font).
 # #CHARSET='.,╷╻!|┆│┃║'
-# #CHARSET=ḀḁḂḃḄḅḆḇḈḉḊḋḌḍḎḏḐḑḒḓḔḕḖḗḘḙḚḛḜḝḞ
+# #CHARSET=ḀḁḂḃḄḅḆḇḈḉḊḋḌḍḎḏḐḑḒḓḔḕḖḗḘḙḚḛḜḝḞ  # Total set
 # CHARSET=ḀḁḂḃḄḅḆḇḈḉḊḋḌḍḎ
 
 INTERFACE=wlp3s0
@@ -63,6 +63,10 @@ while [[ $# -gt 0 ]] ; do
         --interval)
         INTERVAL=$2
         shift
+        shift
+        ;;
+        *)
+        get_info=$1
         shift
         ;;
     esac
@@ -111,7 +115,6 @@ echo_queue () {
     printf %s ${res[@]} $'\n'
 }
 
-echo $movement_direction
 QLEN=$(( $QLEN + $WLEN - 1))  # compensate windowing length reduction
 queue=()
 for i in $(seq $QLEN) ; do queue+=( "0" ) ; done
